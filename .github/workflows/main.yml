@@ -21,4 +21,4 @@ jobs:
 
       - name: Push to Wiki
         run: |
-          git push -q https://Richasy:${{ secrets.ACCESS_TOKEN }}@github.com/Richasy/Bili.Uwp.wiki.git main:master --force
+          git push -q https://Richasy:${{secrets.ACCESS_TOKEN}}@github.com/Richasy/Bili.Uwp.wiki.git main:master --force
