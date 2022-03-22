@@ -7,8 +7,6 @@ on:
   push:
     branches: [ main ]
 
-permissions: write-all
-
 # 工作流运行由一个或多个可以按顺序或并行运行的作业组成
 jobs:
   build:
@@ -24,7 +22,7 @@ jobs:
       - name: Push to Wiki
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           branch: ${{ github.ref }}
           force: true
           repository: Richasy/Bili.Uwp.wiki
