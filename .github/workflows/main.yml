@@ -25,4 +25,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
           force: true
-          repository: Bili.Uwp.wiki
+          repository: Richasy/Bili.Uwp.wiki
