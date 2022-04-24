@@ -24,8 +24,8 @@ function handler($request, $context): Response
     $clientIP   = $request->getAttribute('clientIP');
     */
     /* Config */
-    $upstream_app_url = 'https://api.bilibili.com/pgc/player/api/playurl';
-    $upstream_pc_search_url = 'https://api.bilibili.com/x/web-interface/search/type';
+    $upstream_app_play_url = 'https://api.bilibili.com/pgc/player/web/playurl';
+    $upstream_app_search_url = 'https://app.bilibili.com/x/v2/search/type';
     $upstream_app_season_url = 'https://api.bilibili.com/pgc/view/v2/app/season';
     $timeout = 5; // seconds
 
@@ -60,10 +60,10 @@ function handler($request, $context): Response
 
     //判断请求接口
     if(substr_count($request_uri,'/search/type')!=0){
-        $url = $upstream_pc_search_url . '?' .$request_query;
+        $url = $upstream_app_search_url . '?' .$request_query;
         curl_setopt($ch, CURLOPT_REFERER, $req_referer);
     }elseif (substr_count($request_uri,'playurl')!=0){
-        $url = $upstream_app_url . '?' .$request_query;
+        $url = $upstream_app_play_url . '?' .$request_query;
         curl_setopt($ch, CURLOPT_USERAGENT, 'Bilibili Freedoooooom/MarkII');
     }elseif (substr_count($request_uri,'/app/season')!=0){
         $url = $upstream_app_season_url . '?' .$request_query;
