@@ -1,4 +1,4 @@
-*基于 [zzc10086/grpcery_store](https://github.com/zzc10086/grocery_store/blob/master/bili_proxy/BPplayurl.php) 修改，可以通过 [阿里云函数部署简易教程](https://github.com/ipcjs/bilibili-helper/issues/710#issuecomment-748976481) 进行部署，并将网址写入哔哩的详情代理，播放代理和搜索代理可以用其它服务*
+*基于 [zzc10086/grpcery_store](https://github.com/zzc10086/grocery_store/blob/master/bili_proxy/BPplayurl.php) 修改，可以通过 [阿里云函数部署简易教程](https://github.com/ipcjs/bilibili-helper/issues/710#issuecomment-748976481) 进行部署，并将网址写入哔哩的详情代理。播放代理和搜索代理可以用其它服务*
 
 ```php
 <?php
